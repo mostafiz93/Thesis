@@ -1,0 +1,166 @@
+% ------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+% ------------------------------------------------------------------------
+% AMS-LaTeX definitions:     Thesis ++++ Alex, September 1994 ************
+% ------------------------------------------------------------------------
+% Ph.D. Thesis Defended on November 25, 1994
+% ------------------------------------------------------------------------
+\documentclass[12pt]{report}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{newlfont}
+\usepackage{xthesis} %DAL Thesis Style
+\usepackage{xtocinc} %Include Table of Contents as the first entry in TOC
+\usepackage{graphicx}
+\usepackage[toc,page]{appendix}
+\usepackage{makeidx}
+\usepackage{fixltx2e}
+\usepackage{mathtools}
+%                     Faculty of Grad Studies insists on this!?
+%\usepackage[active]{srcltx}  %SRC Specials for DVI search
+% Fuzz -------------------------------------------------------------------
+\hfuzz2pt % Don't bother to report over-full boxes if over-edge is < 2pt
+% Line spacing -----------------------------------------------------------
+\newlength{\defbaselineskip}
+\setlength{\defbaselineskip}{\baselineskip}
+\newcommand{\setlinespacing}[1]%
+           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+\newcommand{\doublespacing}{\setlength{\baselineskip}%
+                           {2.0 \defbaselineskip}}
+\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+% MATH -------------------------------------------------------------------
+\newcommand{\A}{{\cal A}}
+\newcommand{\h}{{\cal H}}
+\newcommand{\s}{{\cal S}}
+\newcommand{\W}{{\cal W}}
+\newcommand{\BH}{\mathbf B(\cal H)}
+\newcommand{\KH}{\cal  K(\cal H)}
+\newcommand{\Real}{\mathbb R}
+\newcommand{\Complex}{\mathbb C}
+\newcommand{\Field}{\mathbb F}
+\newcommand{\RPlus}{[0,\infty)}
+%
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\essnorm}[1]{\norm{#1}_{\text{\rm\normalshape ess}}}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\seq}[1]{\left<#1\right>}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\RE}{\operatorname{Re}}
+\newcommand{\IM}{\operatorname{Im}}
+\newcommand{\Poly}{{\cal{P}}(E)}
+\newcommand{\EssD}{{\cal{D}}}
+% THEOREMS ---------------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+%
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+%
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}[section]
+%
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%%% ----------------------------------------------------------------------
+\setlength{\tclineskip}{1.05\baselineskip}
+%%% ----------------------------------------------------------------------
+%\nobib
+%\draft
+%\nofront
+
+\dedicate{To all the people who works for open sources projects out of no personal benefit}
+\copyrightyear{2015}
+\submitdate{2015}
+%\convocation{May}{1995}
+
+% ------------------------------------------------------------------------
+
+\title{Detection of  Fraudulent Activities in Online Communities}
+
+\author{Mostafizur Rahman \& Mujahidul Islam}
+
+\supervisor{Dr. S. M. Farhad}
+\university{Bangladesh University Of Engineering And Technology}	
+\address{Dhaka 1000}		
+\dept{Computer Science And Engineering}
+\faculty{Electrical and Electronic Engineering }
+\degree{Bachelor Of Science}
+\permissionfalse
+
+
+% ------------------------------------------------------------------------
+\makeindex
+\begin{document}
+{
+\typeout{:?000000000} % Don't bother with over/under-full boxes
+\beforepreface
+\typeout{:?111111111} % Process All Errors from Here on
+}
+% ------------------------------------------------------------------------
+%\setcounter{page}{1}
+%\tableofcontents
+%\listoffigures
+%\listoftables
+% ------------------------------------------------------------------------
+{
+\typeout{Abstract}
+\include{ABS}
+}
+% ------------------------------------------------------------------------
+{
+\typeout{Acknowledgements}
+\include{ACK}
+}
+% ------------------------------------------------------------------------
+\afterpreface
+\def\baselinestretch{1}
+\setlinespacing{1.66}
+% ------------------------------------------------------------------------
+{
+%\typeout{Introduction}
+\include{introduction}
+\include{related_works}
+}
+% ------------------------------------------------------------------------
+\setlinespacing{1.66}
+% ------------------------------------------------------------------------
+
+%\include{T1}
+%\include{T2}
+%5\include{T3}
+%\include{T4}
+%\include{T5}
+%\include{T6}
+\begin{appendices}
+\chapter{Further Study}
+\section{Perfusion Index}
+
+
+\paragraph{Importance of PI}
+
+\end{appendices}
+
+% ------------------------------------------------------------------------
+\setlinespacing{1.44}
+\bibliographystyle{amsplain}
+\bibliography{xbib}
+% =================================================================
+% Dummy directive
+% Included for Gather Purpose only:
+% %input "Xbib.bib"
+% is no longer necessary because
+%  \bibliography{xbib}
+% is now defined as an input directive
+% (see Options -> Advanced -> Tree [INPUT_DIRECTIVES] for details...
+% It can be reconfigured!
+% =================================================================
+\printindex
+\end{document}
+% ------------------------------------------------------------------------
